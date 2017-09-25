@@ -1,0 +1,1301 @@
+* {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: Georgia;
+}
+
+/* ****>>>>FONT BEGIN<<<<**** */
+	.main-sections-headers h1,
+	.hamburger-menu a:focus,
+	.hamburger-menu a:hover,
+	.menu-bar a:hover,
+	.who-are-we-sections-numerals,
+	.who-are-we-sections-headers,
+	.who-are-we-sections-main-content,
+	.view-more-button a:focus,
+	.view-more-button a:hover,
+	#hassan-section-content h2,
+	#hassan-section-content p,
+	#natalia-section-content h2,
+	#natalia-section-content p,
+	#contact-us-section h2,
+	#contact-us-section p,
+	#contact-us-section h3,
+	#contact input[type="text"],
+	#contact input[type="email"],
+	#contact textarea,
+	.vm-pics-container {
+		color: #FFF;
+	}
+/* ****>>>>FONT END<<<<**** */
+
+/* ****>>>>HOME PAGE CSS BEGIN<<<<**** */
+	#main-body-container {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		position: relative;
+	}
+
+	.main-sections-headers {
+		height: 140px;
+		width: 100%;
+		text-align: center;
+		margin: 0px;
+		padding: 0px;
+		position: relative;
+		background-color: rgba(1, 1, 1, 0.4);
+	}
+
+	.main-sections-headers::after {
+		background-image: url(../sturlifah-photos/sections-headers-background.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		content:"";
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		z-index: -1;
+	}
+
+	.main-sections-headers h1 {
+		padding-top: 50px;
+		margin: 0px;
+	}
+
+	/* >>>MENU BAR SECTION BEGIN<<< */
+		#hamburger-icon-container {
+			z-index: 4;
+			position: fixed;
+			left: 13px;
+			top: 8px;
+			display: relative;
+		}
+
+		#hamburger-icon {
+			cursor: pointer;
+			display: inline-block;
+		}
+
+		#bar-1, #bar-2, #bar-3 {
+			width: 35px;
+			height: 5px;
+			background-color: #333;
+			margin: 5px 0;
+			transition: 0.4s;
+			border: white 0.5px solid;
+		}
+
+		/* Rotate first bar */
+		#bar-1.change {
+			-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+			transform: rotate(-45deg) translate(-9px, 6px) ;
+			background-color: #FFF;
+		}
+
+		/* Fade out the second bar */
+		#bar-2.change {
+			opacity: 0;
+		}
+
+		/* Rotate last bar */
+		#bar-3.change {
+			-webkit-transform: rotate(45deg) translate(-8px, -7px) ;
+			transform: rotate(45deg) translate(-8px, -7px) ;
+			background-color: #FFF;
+		}
+
+		#hamburger-menu-container {
+			position: fixed;
+			width: 100%;
+			z-index: 3;
+		}
+
+		.hamburger-menu {
+			display: none;
+			background-color: rgba(1,1,1, 0.8);
+			height: 100vh;
+			width: 100%;
+		}
+
+		.hamburger-menu a {
+			display: block;
+			text-align: center;
+			font-size: 2.5em;
+			color: #939393;
+			text-decoration: none;	
+			border-bottom: 1px solid #939393;
+			
+		}
+
+		.hamburger-menu a:last-child {
+			padding: 50px 10px 0 10px;
+			border-bottom: none;
+			font-size: 30px;
+		}
+
+		#menu-bar-container {
+			display: block;
+			width: 100%;
+			padding-top: 10px;
+			height: 60px;
+			left: 0;
+			top: 0;
+			z-index: 2;
+			visibility: hidden;
+		}
+
+		.menu-bar {
+			text-align: center;
+		}
+
+		.menu-bar a {
+			display: inline;
+			text-align: center;
+			font-size: 1.875em;
+			color: #939393;
+			text-decoration: none;
+			margin-right: 15px;
+			padding-left: 5px;
+			padding-right: 5px;
+			border-radius: 10px;
+		}
+
+		.menu-bar a:nth-last-child {
+			margin-right: 0;
+		}
+	/* >>>MENU BAR SECTION END<<< */
+
+	/* >>>PARALLAX SECTION BEGIN<<< */
+		#parallax-container:focus,
+		#who-are-we-container:focus,
+		#who-is-he-container:focus,
+		#who-is-she-container:focus,
+		#contact-us-container:focus {
+			outline: none;
+		}
+
+		#parallax-container {
+			width: 100%;
+			height: 100vh;
+			position: relative;
+			overflow: hidden;
+			min-height: 100vh;
+		}
+
+		img {
+			height: 100%;
+			width: 1500px;
+			position: absolute; 
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		layer {
+			position: relative;
+			width: 100%;
+			height: 100vh;
+		}
+
+		.layer {
+			width: 100%;
+			height: 100%;
+			min-height: 100vh;
+			position: fixed;
+			z-index: -1;
+		}
+
+
+		#mobile-header-img {
+			display: none;
+			background-image: url(../sturlifah-photos/mobile-header-img-2.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			width: 100%;
+			height: 100vh;
+		}
+	/* >>>PARALLAX SECTION END<<< */
+
+	/* >>>WHO ARE WE SECTION BEGIN<<< */
+		#who-are-we-container {
+			width: 100%;
+		}
+
+		.who-are-we-sections {
+			width: 100%;
+			padding-bottom: 20px;
+			margin-top: 0;
+			position: relative;
+			background-color: rgba(40, 40, 40, 0.1);
+		}
+
+		.who-are-we-sections::after {
+			background-image: url(../sturlifah-photos/sections-headers-background.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			content:"";
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			position: absolute;
+			z-index: -1;
+		}
+
+		.who-are-we-sections-main-imgs {
+			height: 250px;
+		}
+
+		.who-are-we-sections-main-content {
+			text-align: center;
+			padding-top: 20px;
+			padding-left: 45px;
+			padding-right: 45px;
+			padding-bottom: 20px;
+		}
+
+		.who-are-we-sections-main-content p {
+			text-align: left;
+			font-size: 17px;
+		}
+
+		.view-more-button a {
+			font-size: 1em;
+			color: grey;
+			border: 1px solid transparent;
+			text-decoration: none;
+			padding: 2px 4px;
+			border-radius: 2px;
+			-webkit-transition: all 200ms linear;
+			-o-transition: all 200ms linear;
+			-ms-transition: all 200ms linear;
+			-moz-transition: all 200ms linear;
+			transition: all 200ms linear;
+		}
+
+		.view-more-button a:hover {
+			border: 1px solid white;
+		}
+
+		/* >>>INVESTORS SECTION BEGIN<<< */
+			#investors-section .who-are-we-sections-numerals {
+				background-image: url(../sturlifah-photos/numeral-1.png);
+				background-position: center;
+				background-size: 30px;
+				background-repeat: no-repeat;
+				height: 34px;
+				width: 100%;
+			}
+
+			#investors-section .who-are-we-sections-main-imgs {
+				background: url(../sturlifah-photos/investors-section-img.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-color: #2C3035;
+			}
+		/* >>>INVESTORS SECTION END<<< */
+
+		/* >>>DEVELOPERS SECTION BEGIN<<< */
+			#developers-section .who-are-we-sections-numerals {
+				background-image: url(../sturlifah-photos/numeral-2.png);
+				background-position: center;
+				background-size: 30px;
+				background-repeat: no-repeat;
+				height: 34px;
+				width: 100%;
+			}
+
+			#developers-section .who-are-we-sections-main-imgs {
+				background: url(../sturlifah-photos/developers-section-img.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-color: #2C3035;
+			}
+		/* >>>DEVELOPERS SECTION END<<< */
+
+		/* >>>TRAVELERS SECTION BEGIN<<< */
+			#travelers-section .who-are-we-sections-numerals {
+				background-image: url(../sturlifah-photos/numeral-3.png);
+				background-position: center;
+				background-size: 30px;
+				background-repeat: no-repeat;
+				height: 34px;
+				width: 100%;
+			}
+
+			#travelers-section .who-are-we-sections-main-imgs {
+				background: url(../sturlifah-photos/travelers-section-img.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-color: #2C3035;
+			}
+		/* >>>TRAVELERS SECTION END<<< */
+
+		/* >>>HOBBYIST SECTION BEGIN<<< */
+			#hobbyist-section .who-are-we-sections-numerals {
+				background-image: url(../sturlifah-photos/numeral-4.png);
+				background-position: center;
+				background-size: 30px;
+				background-repeat: no-repeat;
+				height: 34px;
+				width: 100%;
+			}
+
+			#hobbyist-section .who-are-we-sections-main-imgs {
+				background: url(../sturlifah-photos/hobbyist-section-img.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-color: #2C3035;
+			}
+		/* >>>HOBBYIST SECTION END<<< */
+	/* >>>WHO ARE WE SECTION END<<< */
+
+	/* >>>HASSAN'S SECTION BEGIN<<< */
+		#hassan-section-main-img {
+			height: 250px;
+			background: url(../sturlifah-photos/hassan-section-scan-background-img-2.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		#hassan-section-content{
+			padding-left: 45px;
+			padding-right: 45px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			position: relative;
+			background-color: rgba(1, 1, 1, 0.5);
+		}
+
+
+		#hassan-section-content::after {
+			background-image: url(../sturlifah-photos/sections-headers-background.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			content:"";
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			position: absolute;
+			z-index: -1;
+		}
+
+		#hassan-section-header {
+			text-align: center;
+		}
+
+		#hassan-section-content p {
+			font-size: 1.063em;
+		}
+	/* >>>HASSAN'S SECTION END<<< */
+
+	/* >>>NATALIA'S SECTION BEGIN<<< */
+		#natalia-section-main-img {
+			height: 250px;
+			background: url(../sturlifah-photos/natalia-section-scan-background-img.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		#natalia-section-content{
+			padding-left: 45px;
+			padding-right: 45px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			position: relative;
+			background-color: rgba(1, 1, 1, 0.5);
+		}
+
+		#natalia-section-content::after {
+			background-image: url(../sturlifah-photos/sections-headers-background.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			content:"";
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			position: absolute;
+			z-index: -1;
+		}
+
+		#natalia-section-header {
+			text-align: center;
+		}
+
+		#natalia-section-content p {
+			font-size: 1.063em;
+		}
+	/* >>>NATALIA'S SECTION END<<< */
+
+	/* >>>CONTACT US SECTION BEGIN<<< */	
+		#contact-us-container {
+			width: 100%;
+			text-align: center;
+		}
+
+		#contact-us-section-main-img {
+			background: url(../sturlifah-photos/contact-us-section-scan-background-img.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			height: 250px;
+		}
+
+		#contact-us-section {
+			padding-left: 45px;
+			padding-right: 45px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			position: relative;
+			background-color: rgba(1, 1, 1, 0.5);
+		}
+
+		#contact-us-section::after {
+			background-image: url(../sturlifah-photos/sections-headers-background.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			content:"";
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			position: absolute;
+			z-index: -1;
+		}
+
+		::-webkit-input-placeholder { /* Chrome */
+			color: #FFF;
+		}
+		:-ms-input-placeholder { /* IE 10+ */
+			color: #FFF;
+		}
+		::-moz-placeholder { /* Firefox 19+ */
+		  opacity: 1;
+		  color: #FFF;
+		}
+		:-moz-placeholder { /* Firefox 4 - 18 */
+		  opacity: 1;
+		  color: #FFF;
+		}
+
+		#contact-us-section p {
+			font-size: 1.250em;
+		}
+
+		#contact input[type="text"],
+		#contact input[type="email"],
+		#contact textarea {
+			border:1px solid #666;
+			background:#FFF;
+			margin:0 0 5px;
+			padding:10px;
+			background-color: transparent;
+			outline: none;
+		}
+
+		#contact input[type="text"]:focus,
+		#contact input[type="email"]:focus,
+		#contact textarea:focus {
+			border: 1px solid #FFF;
+			background-color: rgba(170,170,170,0.3);;
+		}
+
+		fieldset {
+			border: medium none;
+			margin: 0;
+			position: relative;
+			z-index: 2;
+		}
+
+		#petu {
+			width: 140px;
+			height: 218px;
+			bottom: 0;
+			left: -10px;
+			position: absolute;
+			background-image: url(../sturlifah-photos/petu.png);
+			background-size: 140px, 140px;
+			background-repeat: no-repeat;
+		}
+
+		#kuritsa {
+			width: 140px;
+			height: 218px;
+			bottom: 0;
+			right: 0px;
+			position: absolute;
+			background-image: url(../sturlifah-photos/kuritsa.png);
+			background-size: 140px, 140px;
+			background-repeat: no-repeat;
+		}
+	/* >>>CONTACT US SECTION END<<< */
+/* ****>>>>HOME PAGE CSS END<<<<**** */
+
+/* ****>>>>VIEW MORE PAGE CSS BEGIN<<<<**** */
+	#container2 {
+		width: 100%;
+		background-attachment: fixed;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 1px;
+		position: relative;
+		background-color: #111;
+		background-color: rgba(1, 1, 1, 0.5);
+	}
+
+	#container2::after {
+		background-image: url(../sturlifah-photos/sections-headers-background.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		content:"";
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		z-index: -1;
+	}
+
+	.photo-gallery-header {
+		width: 100%;
+	}
+
+	.return-icon-container {
+		width: 100%;
+		color: transparent;
+		padding-top: 30px;
+		height: 100px;
+	}
+
+	.return-icon {
+		background-image: url(../sturlifah-photos/sturlifah-logo-unactive.png);
+		background-size: 200px;
+		background-repeat: no-repeat;
+		height: 40px;
+		width: 200px;
+		margin: auto;
+		display: block;
+		color: #000;
+		color: rgba(0,0,0,0);
+		-webkit-transition: all 200ms linear;
+		-o-transition: all 200ms linear;
+		-ms-transition: all 200ms linear;
+		-moz-transition: all 200ms linear;
+		transition: all 200ms linear;
+	}
+
+	.return-icon:hover {
+		background-image: url(../sturlifah-photos/sturlifah-logo-white.png);
+		-webkit-transition: all 20ms linear;
+		-o-transition: all 200ms linear;
+		-ms-transition: all 200ms linear;
+		-moz-transition: all 200ms linear;
+		transition: all 200ms linear;
+	}
+
+	.quote-container {
+		background-image: url(../sturlifah-photos/parallax-layer-0.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 400px;
+		color: #111;
+		font-size: 1.250em;
+		background-color: #ececec;
+		text-align: center;
+		padding: 120px 20px 0 20px;
+		font-family: "Times New Roman";
+	}
+	.vm-quote-container {
+		margin-bottom: 20px;
+	}
+
+	.quote-container p {
+		font-style: italic;
+		display: inline-block;
+	}
+
+	.vm-pics-container {
+		text-align: center;
+		width: 100%;
+		position: relative;
+		height: 250px;
+		margin-bottom: 20px;
+		background-color: #4f4f4f;
+	}
+
+	.vm-pics-container.invest {
+		margin-bottom: 0;
+		margin-top: 20px;
+	}
+
+	#hobby-pics-container-3,
+	#travel-pics-container-1,
+	#travel-pics-container-5 {
+		height: 450px;
+	}
+
+	.vm-pics-container:hover .vm-caption-container{
+		display: block;
+		opacity: 1;
+		-webkit-transition: all 500ms linear;
+		-o-transition: all 500ms linear;
+		-ms-transition: all 500ms linear;
+		-moz-transition: all 500ms linear;
+		transition: all 500ms linear;
+	}
+
+	.vm-pics {
+		width: 100%;
+		height: 250px;
+	}
+
+	#hobby-pics-container-3 .vm-pics,
+	#travel-pics-container-1 .vm-pics,
+	#travel-pics-container-5 .vm-pics {
+		height: 450px;
+	}
+
+	.vm-caption-container {
+		width: 100%;
+		height: 250px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		padding-top: 100px;
+		background-color: rgba(1,1,1,0.4);
+		opacity: 0;
+		-webkit-transition: all 500ms linear;
+		-o-transition: all 500ms linear;
+		-ms-transition: all 500ms linear;
+		-moz-transition: all 500ms linear;
+		transition: all 500ms linear;
+	}
+
+	.vm-p-container {
+		width: 100%;
+		background-image: url(../sturlifah-photos/parallax-layer-0.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		color: #111;
+		font-size: 0.938em;
+		background-color: #ececec;
+		padding: 20px 20px;
+	}
+
+	#hobby-pics-container-3 .vm-caption-container,
+	#travel-pics-container-1 .vm-caption-container,
+	#travel-pics-container-5 .vm-caption-container {
+		height: 450px;
+		padding-top: 200px;
+	}
+
+	#invest-pic-1 {
+		width: 100%;
+		background-image: url(../sturlifah-photos/invest-pic-1.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	#invest-pic-2 {
+		width: 100%;
+		background-image: url(../sturlifah-photos/invest-pic-2.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	#invest-pic-3 {
+		width: 100%;
+		background-image: url(../sturlifah-photos/invest-pic-3.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	#travel-pic-1 {
+		width: 100%;
+		background-image: url(../sturlifah-photos/travel-pic-1.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	#travel-pic-2 {
+		width: 100%;
+		background-image: url(../sturlifah-photos/travel-pic-2.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	#travel-pic-3 {
+		width: 100%;
+		background-image: url(../sturlifah-photos/travel-pic-3.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	#travel-pic-4 {
+		width: 100%;
+		background-image: url(../sturlifah-photos/travel-pic-4.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	#travel-pic-5 {
+		width: 100%;
+		background-image: url(../sturlifah-photos/travel-pic-5.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position-x: -195px;
+	}
+
+	#hobby-pic-1 {
+		width: 100%;
+		background-image: url(../sturlifah-photos/hobby-pic-1.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	#hobby-pic-2 {
+		width: 100%;
+		background-image: url(../sturlifah-photos/hobby-pic-2.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	#hobby-pic-3 {
+		width: 100%;
+		background-image: url(../sturlifah-photos/hobby-pic-3.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	#hobby-pic-4 {
+		width: 100%;
+		background-image: url(../sturlifah-photos/hobby-pic-4.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+/* ****>>>>VIEW MORE PAGE CSS END<<<<**** */
+
+/* ****>>>MEDIA QUERIES BEGIN<<<**** */
+	/* Targets Edge 12+ (All) BEGIN */
+		@supports (-ms-ime-align:auto) {
+		   #parallax-container {
+				display: none;
+			}
+			
+			#mobile-header-img {
+				display: block;
+			}
+			
+			.main-sections-headers,
+			.who-are-we-sections,
+			#hassan-section-content,
+			#natalia-section-content,
+			#contact-us-section {
+				background-color: #222;
+			}
+		}
+	/* Targets Edge 12+ (All) END */
+
+	/* Targets IE 8, 9 and 10 BEGIN */
+		@media screen\0 {
+			#parallax-container {
+				display: none;
+			}
+			
+			#mobile-header-img {
+				display: block;
+			}
+			
+			.main-sections-headers,
+			.who-are-we-sections,
+			#hassan-section-content,
+			#natalia-section-content {
+				background-color: #222;
+			}
+		}
+	/* Targets IE 8, 9 and 10 END */
+
+	/* targets IE 6 and 7 BEGIN */
+		@media screen\9 {
+			#parallax-container {
+				display: none;
+			}
+			
+			#mobile-header-img {
+				display: block;
+			}
+			
+			.main-sections-headers,
+			.who-are-we-sections,
+			#hassan-section-content,
+			#natalia-section-content {
+				background-color: #222;
+			}
+		}
+
+		@media screen and (min-width: 412px) {
+			.hamburger-menu a:last-child {
+				font-size: 2.5em;
+			}
+			#vm-pics-container-1 .vm-pics {
+				background-position-y: -180px;
+			}
+			#travel-pics-container-1 {
+				height: 550px;
+			}
+
+			#travel-pics-container-1 .vm-pics {
+				height: 550px;
+			}
+
+			#travel-pics-container-1 .vm-caption-container {
+				height: 550px;
+				padding-top: 250px;
+			}
+			
+			#hobby-pics-container-3 {
+				height: 600px;
+			}
+
+			#hobby-pics-container-3 .vm-pics {
+				height: 600px;
+			}
+
+			#hobby-pics-container-3 .vm-caption-container {
+				height: 600px;
+				padding-top: 250px;
+			}
+			
+			#travel-pic-5 {
+				background-position-x: 0px;
+			}
+		}
+	/* targets IE 6 and 7 END */
+
+	/* Targets mobile devices BEGIN*/
+		@media screen and (min-width: 568px) {
+			.who-are-we-sections-main-imgs,
+			#hassan-section-main-img,
+			#natalia-section-main-img,
+			#contact-us-section-main-img{
+				height: 350px;
+			}
+			
+			#petu {
+				width: 180px;
+				height: 281px;
+				bottom: 0;
+				left: 20px;
+				background-size: 180px, 180px;
+			}
+
+			#kuritsa {
+				width: 180px;
+				height: 281px;
+				bottom: 0;
+				right: 30px;
+				background-size: 180px, 180px;
+			}
+			
+			#container2 {
+				padding-left: 40px;
+				padding-right: 40px;
+			}
+			
+			.vm-pics-container,
+			.vm-pics,
+			.vm-caption-container {
+				height: 450px;
+			}
+
+			.vm-caption-container {
+				padding-top: 200px;
+			}
+			#travel-pics-container-1 {
+				height: 700px;
+			}
+
+			#travel-pics-container-1 .vm-pics {
+				height: 700px;
+			}
+
+			#travel-pics-container-1 .vm-caption-container {
+				height: 700px;
+				padding-top: 350px;
+			}
+			#hobby-pics-container-3 {
+				height: 800px;
+			}
+
+			#hobby-pics-container-3 .vm-pics {
+				height: 800px;
+			}
+
+			#hobby-pics-container-3 .vm-caption-container {
+				height: 800px;
+				padding-top: 425px;
+			}
+		}
+
+		@media screen and (max-width: 767px) {
+			#parallax-container {
+				display: none;
+			}
+			
+			#mobile-header-img {
+				display: block;
+			}
+		}
+	/* Targets mobile devices END*/
+
+	/* Targets tablets, labtops and desktops BEGIN */
+		@media screen and (min-width: 768px) {
+			
+			#container,
+			.hamburger-menu a {
+				border-left: 50px solid black;
+				border-right: 50px solid black;
+			}
+			
+			#hamburger-icon-container {
+				left: 65px;
+				top: 8px;
+			}
+			
+			.who-are-we-sections {
+				position: relative;
+				height: 800px;
+			}
+			
+			.who-are-we-sections-main-content {
+				background-image: url(../sturlifah-photos/sections-headers-background.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+				width: 250px;
+				position: absolute;
+				left: 27%;
+				opacity: 0.8;
+				background-color: #222;
+			}
+			
+			.who-are-we-sections-main-imgs {
+				display: none;
+			}
+			
+			#investors-section {
+				background: url(../sturlifah-photos/investors-section-img.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-color: #2C3035;
+			}
+			
+			
+			#investors-section .who-are-we-sections-main-content {
+				height: 500px;
+				margin-top: 140px;
+			}
+			
+			#investors-section .who-are-we-sections-main-content p{
+				font-size: 0.813em;
+			}
+			
+			#developers-section {
+				background: url(../sturlifah-photos/developers-section-img.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-color: #2C3035;
+			}
+			
+			
+			#developers-section .who-are-we-sections-main-content {
+				height: 470px;
+				margin-top: 140px;
+			}
+			
+			#developers-section .who-are-we-sections-main-content p{
+				font-size: 0.813em;
+			}
+			
+			#travelers-section {
+				background: url(../sturlifah-photos/travelers-section-img.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-color: #2C3035;
+				background-position-x: -200px;
+				
+			}
+			
+			#travelers-section .who-are-we-sections-main-content {
+				height: 590px;
+				margin-top: 100px;
+				
+			}
+			
+			#travelers-section .who-are-we-sections-main-content p{
+				font-size: 0.813em;
+			}
+			
+			#hobbyist-section {
+				background: url(../sturlifah-photos/hobbyist-section-img.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-color: #2C3035;
+			}
+			
+			#hobbyist-section .who-are-we-sections-main-content {
+				height: 420px;
+				margin-top: 180px;
+			}
+			
+			#hobbyist-section .who-are-we-sections-main-content p{
+				font-size: 0.813em;
+			}
+			
+			#container2 {
+				padding-left: 80px;
+				padding-right: 80px;
+			}
+			#travel-pics-container-5 {
+				height: 650px;
+			}
+
+			#travel-pics-container-5 .vm-pics {
+				height: 650px;
+			}
+
+			#travel-pics-container-5 .vm-caption-container {
+				height: 650px;
+				padding-top: 300px;
+			}
+			#travel-pics-container-1 {
+				height: 850px;
+			}
+
+			#travel-pics-container-1 .vm-pics {
+				height: 850px;
+			}
+
+			#travel-pics-container-1 .vm-caption-container {
+				height: 850px;
+				padding-top: 450px;
+			}
+			#travel-pic-5 {
+				background-position-x: -150px;
+			}
+			#hobby-pics-container-3 {
+				height: 800px;
+			}
+
+			#hobby-pics-container-3 .vm-pics {
+				height: 800px;
+			}
+
+			#hobby-pics-container-3 .vm-caption-container {
+				height: 800px;
+				padding-top: 425px;
+			}
+			#hobby-pics-container-3 {
+				height: 1000px;
+			}
+
+			#hobby-pics-container-3 .vm-pics {
+				height: 1000px;
+			}
+
+			#hobby-pics-container-3 .vm-caption-container {
+				height: 1000px;
+				padding-top: 450px;
+			}
+		}
+		
+		@media screen and (min-width: 893px) {
+			#travel-pic-5 {
+				background-position-x: -18px;
+			}
+		
+		}
+
+		@media screen and (min-width: 1024px) {
+			
+			#container,
+			.hamburger-menu a {
+				border-left: 100px solid black;
+				border-right: 100px solid black;
+			}
+			
+			img {
+				height: 100%;
+				width: 1500px;
+				position: absolute; 
+				left: 45%;
+				transform: translateX(-50%);
+			}
+			
+			#hamburger-icon-container {
+				display: none;
+			}
+			
+			#menu-bar-container {
+				visibility: visible;
+			}
+			
+			.layer-5 {
+				background-image: url(../sturlifah-photos/parallax-layer-5-large.png);
+			}
+
+			
+			.who-are-we-sections-main-content {
+				left: 10%;
+			}
+			
+			#hassan-section-content,
+			#natalia-section-content {
+			padding-left: 95px;
+			padding-right: 95px;
+		}
+			
+			#hassan-section-main-img,
+			#natalia-section-main-img,
+			#contact-us-section-main-img {
+				height: 650px;
+			}
+			
+			#travelers-section {
+				background-position-x: -40px;
+			}
+			
+			#petu {
+				left: 90px;
+			}
+
+			#kuritsa {
+				right: 100px;
+			}
+			
+			#container2 {
+				padding-left: 150px;
+				padding-right:150px;
+			}
+			
+			.vm-pics-container,
+			.vm-pics,
+			.vm-caption-container {
+				height: 550px;
+			}
+			.vm-caption-container {
+				padding-top: 225px;
+			}
+			
+			#travel-pics-container-1 {
+				height: 800px;
+			}
+
+			#travel-pics-container-1 .vm-pics {
+				height: 800px;
+			}
+
+			#travel-pics-container-1 .vm-caption-container {
+				height: 800px;
+				padding-top: 425px;
+			}
+			
+			#travel-pics-container-5 {
+				height: 650px;
+			}
+
+			#travel-pics-container-5 .vm-pics {
+				height: 650px;
+			}
+
+			#travel-pics-container-5 .vm-caption-container {
+				height: 650px;
+				padding-top: 300px;
+			}
+			#travel-pic-5 {
+				background-position-x: 0px;
+			}
+		}
+
+		@media screen and (min-width: 1130px) {
+			#container2 {
+				padding-left: 300px;
+				padding-right:300px;
+			}
+			
+			#travel-pic-5 {
+				background-position-x: -150px;
+			}
+			.vm-caption-container p{
+				font-size: 1.5625em;
+			}
+		}
+
+		@media screen and (min-width: 1024px) and (max-width: 1130px) {
+			#hassan-section-main-img {
+				background-position-x: -230px;
+			}
+			
+			#contact-us-section-main-img {
+				background-position-x: -150px;
+			}
+		}
+
+		@media screen and (min-width: 1330px) {
+			
+			.vm-pics-container,
+			.vm-pics,
+			.vm-caption-container {
+				height: 650px;
+			}
+			.vm-caption-container {
+				padding-top: 275px;
+			}
+			#travel-pics-container-1 {
+				height: 800px;
+			}
+
+			#travel-pics-container-1 .vm-pics {
+				height: 800px;
+			}
+
+			#travel-pics-container-1 .vm-caption-container {
+				height: 800px;
+				padding-top: 425px;
+			}
+			#travel-pic-1 {
+				background-position-y: -150px;
+			}
+			#travel-pics-container-5 {
+				height: 700px;
+			}
+
+			#travel-pics-container-5 .vm-pics {
+				height: 700px;
+			}
+
+			#travel-pics-container-5 .vm-caption-container {
+				height: 700px;
+				padding-top: 325px;
+			}
+			#travel-pic-5 {
+				background-position-x: 0px;
+			}
+			#hobby-pics-container-3 {
+				height: 1200px;
+			}
+
+			#hobby-pics-container-3 .vm-pics {
+				height: 1200px;
+			}
+
+			#hobby-pics-container-3 .vm-caption-container {
+				height: 1200px;
+				padding-top: 550px;
+			}
+		}
+	/* Targets tablets, labtops and desktops END */
+/* ****>>>MEDIA QUERIES END<<<**** */
